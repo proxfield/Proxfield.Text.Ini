@@ -1,4 +1,4 @@
-﻿namespace Proxfield.Text.Ini
+namespace Proxfield.Text.Ini
 {
     public class IniSection
     {
@@ -18,7 +18,7 @@
 
         public string GetName() => _name;
         public void Clear() => _values.Clear();
-        public object? GetValue(string name) 
+        public object? GetValue(string name)
             => _values
             .Where(prop => name.Equals(prop.Name))
             .FirstOrDefault()?

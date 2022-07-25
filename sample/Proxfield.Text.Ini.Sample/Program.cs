@@ -1,4 +1,4 @@
-﻿
+
 using Proxfield.Text.Ini;
 using Proxfield.Text.Ini.Sample.Models;
 

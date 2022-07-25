@@ -1,4 +1,4 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
 
 namespace Proxfield.Text.Ini.Extensions
 {
@@ -9,9 +9,9 @@ namespace Proxfield.Text.Ini.Extensions
             if (Nullable.GetUnderlyingType(type) != null)
             {
                 NullableConverter nullableConverter = new(type);
-                type = nullableConverter.UnderlyingType;                
+                type = nullableConverter.UnderlyingType;
             }
-            
+
             return Convert.ChangeType(obj, type);
         }
     }

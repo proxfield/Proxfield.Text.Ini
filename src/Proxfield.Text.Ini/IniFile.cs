@@ -1,4 +1,4 @@
-﻿namespace Proxfield.Text.Ini
+namespace Proxfield.Text.Ini
 {
     public class IniFile
     {

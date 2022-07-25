@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+using System.Reflection;
 
 namespace Proxfield.Text.Ini.Extensions
 {
@@ -6,7 +6,7 @@ namespace Proxfield.Text.Ini.Extensions
     {
         public static string[] PrimitiveTypes = new[]
         {
-            typeof(DateTime?).Name,  
+            typeof(DateTime?).Name,
             typeof(string).Name,
             typeof(bool).Name,
             typeof(int).Name

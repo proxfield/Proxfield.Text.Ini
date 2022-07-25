@@ -1,4 +1,4 @@
-﻿namespace Proxfield.Text.Ini
+namespace Proxfield.Text.Ini
 {
     public class IniValue
     {
@@ -22,7 +22,7 @@
             Type = typeof(T);
         }
 
-        public override string ToString() 
+        public override string ToString()
             => string.Format(OPERATOR, Name, Value?.ToString());
     }
 }

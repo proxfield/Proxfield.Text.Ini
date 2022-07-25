@@ -1,4 +1,4 @@
-﻿namespace Proxfield.Text.Ini.Sample.Models
+namespace Proxfield.Text.Ini.Sample.Models
 {
     public class Country
     {

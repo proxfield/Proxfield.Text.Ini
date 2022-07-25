@@ -1,4 +1,4 @@
-﻿using System.Text.RegularExpressions;
+using System.Text.RegularExpressions;
 
 namespace Proxfield.Text.Ini.Constants
 {
@@ -10,7 +10,7 @@ namespace Proxfield.Text.Ini.Constants
 
         public static bool IsSection(this string line)
             => Regex.IsMatch(line, SectionRegex);
-        
+
         public static bool IsKeyPar(this string line)
             => Regex.IsMatch(line, KeyParRegex);
 
@@ -32,7 +32,7 @@ namespace Proxfield.Text.Ini.Constants
 
             return new KeyValuePair<string, object?>(
                 matches[1].Value ?? string.Empty,
-                matches?.LastOrDefault()?.Value 
+                matches?.LastOrDefault()?.Value
                 );
         }
     }

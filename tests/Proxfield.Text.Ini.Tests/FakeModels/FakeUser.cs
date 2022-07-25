@@ -1,4 +1,4 @@
-﻿namespace Proxfield.Text.Ini.Tests.FakeModels
+namespace Proxfield.Text.Ini.Tests.FakeModels
 {
     public class FakeUser
     {

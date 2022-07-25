@@ -1,4 +1,4 @@
-﻿namespace Proxfield.Text.Ini.Constants
+namespace Proxfield.Text.Ini.Constants
 {
     public class IniConstants
     {

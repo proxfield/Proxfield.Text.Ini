@@ -1,4 +1,4 @@
-﻿using Proxfield.Text.Ini.Constants;
+using Proxfield.Text.Ini.Constants;
 using Proxfield.Text.Ini.Extensions;
 using System.Reflection;
 using System.Text;
@@ -19,7 +19,7 @@ namespace Proxfield.Text.Ini
         /// <returns></returns>
         public static string SerializeObject<T>(T? obj, IniSerializerSettings? settings = null)
         {
-            if (obj == null) return string.Empty; 
+            if (obj == null) return string.Empty;
             settings ??= new IniSerializerSettings();
             return SerializeObjectInternal(obj!, typeof(T), settings);
         }
@@ -33,7 +33,7 @@ namespace Proxfield.Text.Ini
         public static string SerializeObject(object obj, Type type, IniSerializerSettings? settings = null)
         {
             settings ??= new IniSerializerSettings();
-            return SerializeObjectInternal(obj, type, settings);   
+            return SerializeObjectInternal(obj, type, settings);
         }
         /// <summary>
         /// Get IniFile from string content
@@ -57,7 +57,7 @@ namespace Proxfield.Text.Ini
             });
 
             return new IniFile(sections);
-         }
+        }
         /// <summary>
         /// Deserialize content to an object
         /// </summary>
@@ -93,10 +93,10 @@ namespace Proxfield.Text.Ini
                         .Where(c => c.Name.Equals(propertyKeyPar.Key))
                         .FirstOrDefault();
 
-                property?.SetValue(innerProperty, propertyKeyPar.Value?.ConvertTo(property.PropertyType));
+                    property?.SetValue(innerProperty, propertyKeyPar.Value?.ConvertTo(property.PropertyType));
                 }
 
-                if(objects.Where(p => p.Key.Equals(section)).Any())
+                if (objects.Where(p => p.Key.Equals(section)).Any())
                 {
                     var remove = objects.Where(p => p.Key.Equals(section)).First();
                     var index = objects.IndexOf(remove);
@@ -132,7 +132,7 @@ namespace Proxfield.Text.Ini
                             c.SetValue(obj, item.Value);
                         }
 
-                        
+
                     }
                 });
 

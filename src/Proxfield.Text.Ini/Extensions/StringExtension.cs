@@ -1,4 +1,4 @@
-﻿namespace Proxfield.Text.Ini.Extensions
+namespace Proxfield.Text.Ini.Extensions
 {
     public static class StringExtension
     {
