@@ -41,14 +41,9 @@ namespace Proxfield.Text.Ini
         /// <returns></returns>
         public static IniFile GetIniFile(string content)
         {
-            var lines = content
-                .Replace("\r", string.Empty)
-                .Split("\n")
-                .ToList();
-
             var sections = new List<IniSection>();
             IniSection? section = null;
-            lines.ForEach(e =>
+            content.ToLines().ForEach(e =>
             {
                 if (e.IsSection())
                 {
@@ -72,18 +67,12 @@ namespace Proxfield.Text.Ini
         {
             var instance = (T?)Activator.CreateInstance(typeof(T));
             PropertyInfo[] objectProps = typeof(T).GetProperties();
-
-            var lines = content
-                .Replace("\r", string.Empty)
-                .Split("\n")
-                .ToList();
-
             object? innerProperty = instance;
 
             var objects = new List<KeyValuePair<string, object?>>();
             var section = typeof(T).Name;
 
-            lines.ForEach(e =>
+            content.ToLines().ForEach(e =>
             {
                 if (e.IsSection() && !e.GetSectionName().Equals(typeof(T).Name))
                 {

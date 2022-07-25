@@ -22,7 +22,7 @@ namespace Proxfield.Text.Ini.Constants
                 .ToString();
         }
 
-        public static KeyValuePair<string, object> GetAttributeNameValue(this string line)
+        public static KeyValuePair<string, object?> GetAttributeNameValue(this string line)
         {
             var matches = Regex
                 .Match(line, KeyParRegex)
@@ -30,9 +30,9 @@ namespace Proxfield.Text.Ini.Constants
                 .Values
                 .ToList();
 
-            return new KeyValuePair<string, object>(
+            return new KeyValuePair<string, object?>(
                 matches[1].Value ?? string.Empty,
-                matches.LastOrDefault().Value ?? new object()
+                matches?.LastOrDefault()?.Value 
                 );
         }
     }
