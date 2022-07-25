@@ -13,7 +13,7 @@ The Ini/Config/Conf reader library is a lightweight .ini file parser for DotNet.
 PM> Install-Package Proxfield.Text.Ini
 ```
 
-Visit out project at the [Nuget Repository Page](https://www.nuget.org/packages/Proxfield.Extensions.Caching.SQLite) to know more.
+Visit out project at the [Nuget Repository Page](https://www.nuget.org/packages/Proxfield.Text.Ini) to know more.
 
 ## How
 
