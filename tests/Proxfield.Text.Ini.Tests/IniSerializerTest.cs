@@ -36,5 +36,14 @@ namespace Proxfield.Text.Ini.Tests
             //Assert
             Assert.Equal(expected, result);
         }
+
+        [Fact]
+        public void Serialize_NullObject_ShouldReturnEmpty()
+        {
+            //Arrange & Act
+            var result = IniSerializer.SerializeObject<FakeUser>(null);
+            //Assert
+            Assert.Empty(result);
+        }
     }
 }

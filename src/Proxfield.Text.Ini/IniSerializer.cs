@@ -17,8 +17,9 @@ namespace Proxfield.Text.Ini
         /// <param name="obj"></param>
         /// <param name="settings"></param>
         /// <returns></returns>
-        public static string SerializeObject<T>(T obj, IniSerializerSettings? settings = null)
+        public static string SerializeObject<T>(T? obj, IniSerializerSettings? settings = null)
         {
+            if (obj == null) return string.Empty; 
             settings ??= new IniSerializerSettings();
             return SerializeObjectInternal(obj!, typeof(T), settings);
         }
@@ -92,7 +93,7 @@ namespace Proxfield.Text.Ini
                         .Where(c => c.Name.Equals(propertyKeyPar.Key))
                         .FirstOrDefault();
 
-                    property?.SetValue(innerProperty, Convert.ChangeType(propertyKeyPar.Value, property.PropertyType));
+                property?.SetValue(innerProperty, propertyKeyPar.Value?.ConvertTo(property.PropertyType));
                 }
 
                 if(objects.Where(p => p.Key.Equals(section)).Any())
