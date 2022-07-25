@@ -159,6 +159,13 @@ namespace Proxfield.Text.Ini
                });
             return builder.ToString();
         }
+        /// <summary>
+        /// Internal method for serializing objects
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <param name="type"></param>
+        /// <param name="settings"></param>
+        /// <returns></returns>
         private static string SerializeObjectInternal(object obj, Type type, IniSerializerSettings settings)
         {
             return $"[{type.Name}]\n{Read(obj, type, type.Name)}";
