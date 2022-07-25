@@ -8,9 +8,9 @@
 	<PackageIcon>images\logo.png</PackageIcon>
 	<PackageIconUrl>https://proxfield.com/public/favicon.png</PackageIconUrl>
 	<PackageId>Proxfield.Text.Ini</PackageId>
-	<Version>0.1.0</Version>
+	<Version>0.1.1</Version>
 	<PackageTags>Proxfield</PackageTags>
-	<Description></Description>
+	<Description>The IniConverter is a lightweight Ini serializer and deserializer library. Allows dealing with Ini files with section, commenting and section nesting. </Description>
 	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<PackageProjectUrl>https://github.com/proxfield/Proxfield.Text.Ini</PackageProjectUrl>
 	<RepositoryUrl>https://github.com/proxfield/Proxfield.Text.Ini</RepositoryUrl>
