@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+	<PackageIcon>images\logo.png</PackageIcon>
+	<PackageIconUrl>https://proxfield.com/public/favicon.png</PackageIconUrl>
+	<PackageId>Proxfield.Text.Ini</PackageId>
+	<Version>0.1.0</Version>
+	<PackageTags>Proxfield</PackageTags>
+	<Description></Description>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
+	<PackageProjectUrl>https://github.com/proxfield/Proxfield.Text.Ini</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/proxfield/Proxfield.Text.Ini</RepositoryUrl>
+	<RepositoryType>git</RepositoryType>
+	<Company>Proxfield Consultoria</Company>
+	<PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+	<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+	<ItemGroup>
+		<None Include="..\..\docs\images\logo.png" Pack="true" Visible="false" PackagePath="images\logo.png" />
+		<None Include="..\..\LICENSE.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+</Project>
