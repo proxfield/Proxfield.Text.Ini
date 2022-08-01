@@ -25,7 +25,7 @@ namespace Proxfield.Text.Ini.Tests
         public void Serialize_ShouldBeOk()
         {
             //Arrange
-            string expected = $"[FakeUser]\nName=Jose\nAge=10\n";
+            string expected = $"[FakeUser]\nName=Jose\r\nAge=10\r\n";
             var user = new FakeUser()
             {
                 Age = 10,

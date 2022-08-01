@@ -9,10 +9,12 @@ namespace Proxfield.Text.Ini.Sample.Models
         public string? UserName { get; set; }
         public bool? IsDeleted { get; set; }
         public Address? Address { get; set; }
+        public DateTime CreatedAt { get; set; }
         public User()
         {
             this.UserId = Guid.NewGuid().ToString();
             this.IsDeleted = false;
+            CreatedAt = DateTime.UtcNow;
         }
     }
 }

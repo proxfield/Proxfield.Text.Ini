@@ -9,7 +9,14 @@ namespace Proxfield.Text.Ini.Extensions
             typeof(DateTime?).Name,
             typeof(string).Name,
             typeof(bool).Name,
-            typeof(int).Name
+            typeof(bool?).Name,
+            typeof(int).Name,
+            typeof(int?).Name,
+            typeof(long).Name,
+            typeof(long?).Name,
+            typeof (short).Name,
+            typeof (short?).Name,
+            typeof(DateTime).Name,
         };
 
         public static bool IsPrimitive(this PropertyInfo property)
