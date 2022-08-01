@@ -1,7 +1,7 @@
 The Ini/Config/Conf reader library is a lightweight .ini file parser for DotNet.
 
 ![GitHub License](https://img.shields.io/github/license/proxfield/Proxfield.Text.Ini)
-[![Version](https://img.shields.io/badge/version-0.1.0-brightgreen.svg)](https://semver.org)
+[![Version](https://img.shields.io/badge/version-0.1.2-yellow.svg)](https://semver.org)
 ![Actions](https://github.com/proxfield/Proxfield.Text.Ini/actions/workflows/build.yml/badge.svg)
 [![Nuget](https://github.com/proxfield/Proxfield.Text.Ini/actions/workflows/release.yml/badge.svg)](https://github.com/proxfield/Proxfield.Extensions.Caching.SQLite/actions/workflows/release.yml)
 ![GitHub branch checks state](https://img.shields.io/github/checks-status/proxfield/Proxfield.Text.Ini/main)
