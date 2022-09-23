@@ -1,5 +1,8 @@
 using Proxfield.Text.Ini.Constants;
 using Proxfield.Text.Ini.Extensions;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using System.Text;
 
@@ -17,7 +20,7 @@ namespace Proxfield.Text.Ini
         /// <param name="obj"></param>
         /// <param name="settings"></param>
         /// <returns></returns>
-        public static string SerializeObject<T>(T? obj, IniSerializerSettings? settings = null)
+        public static string SerializeObject<T>(T obj, IniSerializerSettings? settings = null)
         {
             if (obj == null) return string.Empty;
             settings ??= new IniSerializerSettings();
@@ -64,9 +67,9 @@ namespace Proxfield.Text.Ini
         /// <typeparam name="T"></typeparam>
         /// <param name="content"></param>
         /// <returns></returns>
-        public static T? DeserializeObject<T>(string content)
+        public static T DeserializeObject<T>(string content)
         {
-            var instance = (T?)Activator.CreateInstance(typeof(T));
+            var instance = (T)Activator.CreateInstance(typeof(T))!;
             PropertyInfo[] objectProps = typeof(T).GetProperties();
             object? innerProperty = instance;
 
@@ -106,11 +109,11 @@ namespace Proxfield.Text.Ini
                 objects.Add(new KeyValuePair<string, object?>(section, innerProperty));
             });
 
-            var mainOne = (T?)objects.FirstOrDefault(p => p.Key.Equals(typeof(T).Name)).Value;
+            var mainOne = (T)objects.FirstOrDefault(p => p.Key.Equals(typeof(T).Name)).Value!;
             return FullFill<T>(mainOne, objects);
         }
 
-        private static T? FullFill<T>(T? obj, List<KeyValuePair<string, object?>> objects)
+        private static T FullFill<T>(T obj, List<KeyValuePair<string, object?>> objects)
         {
             obj?.GetType()
                   .GetProperties()
@@ -156,7 +159,7 @@ namespace Proxfield.Text.Ini
                .ForEach(p =>
                {
                    builder.AppendLine($"[{path}.{p.Name}]");
-                   builder.Append(Read(p.GetValue(obj), p.PropertyType, $"{path}.{p.Name}"));
+                   builder.Append(Read(p.GetValue(obj)!, p.PropertyType, $"{path}.{p.Name}"));
                });
             return builder.ToString();
         }

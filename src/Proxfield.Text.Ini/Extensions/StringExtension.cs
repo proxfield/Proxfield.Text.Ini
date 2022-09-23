@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Linq;
+
 namespace Proxfield.Text.Ini.Extensions
 {
     public static class StringExtension

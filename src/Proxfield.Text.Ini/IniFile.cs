@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace Proxfield.Text.Ini
 {
     public class IniFile
